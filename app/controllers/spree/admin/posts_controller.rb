@@ -52,7 +52,7 @@ class Spree::Admin::PostsController < Spree::Admin::ResourceController
   private
 
   def post_params
-    params.require(:post).permit(:title, :description, :published, :event)
+    params.require(:post).permit(:title, :description, :published, :event_date)
   end
 
 end
