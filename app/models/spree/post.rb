@@ -1,7 +1,7 @@
 class Spree::Post < ActiveRecord::Base
-  validates_presence_of :title, :description, :event
+  validates_presence_of :title, :description, :event_date
 
-  def event
+  def event_date
   end
 
   scope :published, lambda { where(:published => true) }
