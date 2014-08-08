@@ -14,6 +14,7 @@ class Spree::Admin::PostsController < Spree::Admin::ResourceController
 
   def create
     @post = Spree::Post.new(post_params)
+    @post.event_date = Date.strptime("#{params['event_date(3i)']}/#{params['event_date(2i)']}/#{params['event_date(1i)']}", "%d/%m/%y")
     if @post.save
       flash[:notice] = "Post saved successfully"
       redirect_to admin_posts_path
