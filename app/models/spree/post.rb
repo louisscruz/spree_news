@@ -1,8 +1,8 @@
 class Spree::Post < ActiveRecord::Base
   validates_presence_of :title, :description, :event_date
   composed_of :event_date,
-              :class_name => 'Date',
-              :mapping => %w(Date to_s),
+              :class_name => 'Time',
+              :mapping => %w(Time to_s),
               :constructor => Proc.new{ |item| item },
               :converter => Proc.new{ |item| item }
 
