@@ -1,7 +1,16 @@
 <div data-hook="news">
   <div>
     <h6>
-      <%= l(@post.created_at, format: "%d %B %Y") %>
+      <%= l(post.event_month) %>
+    </h6>
+    <h6>
+      <%= l(post.event_day) %>
+    </h6>
+    <h6>
+      <%= l(post.event_year) %>
+    </h6>
+    <h6>
+      <%= l(post.event_year) %>
     </h6>
     <h1>
       <%= @post.title %>

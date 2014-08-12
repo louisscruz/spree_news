@@ -1,7 +1,13 @@
 <p><%= f.label :title, Spree::Post.human_attribute_name(:title) %></p>
 <p><%= f.text_field :title %></p>
-<p><%= f.label :event_date, Spree::Post.human_attribute_name(:event_date) %></p>
-<p><%= f.date_select :event_date %></p>
+<p><%= f.label :event_month, Spree::Post.human_attribute_name(:event_month) %></p>
+<p><%= f.text_field :event_month %></p>
+<p><%= f.label :event_day, Spree::Post.human_attribute_name(:event_day) %></p>
+<p><%= f.text_field :event_day %></p>
+<p><%= f.label :event_year, Spree::Post.human_attribute_name(:event_year) %></p>
+<p><%= f.text_field :event_year %></p>
+<p><%= f.label :event_time, Spree::Post.human_attribute_name(:event_time) %></p>
+<p><%= f.text_field :event_time %></p>
 <p><%= f.label :description, Spree::Post.human_attribute_name(:description) %></p>
 <p><%= f.text_area :description %></p>
 <p><%= f.label :published, Spree::Post.human_attribute_name(:published) %></p>
