@@ -3,7 +3,10 @@ class CreatePosts < ActiveRecord::Migration
     create_table :spree_posts do |t|
       t.string :title
       t.text :description
-      t.date :event_date
+      t.text :event_month
+      t.text :event_day
+      t.text :event_year
+      t.text :event_time
       t.boolean :published
 
       t.timestamps
