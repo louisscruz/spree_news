@@ -1,8 +1,8 @@
 <% if Spree::Post.published.any? %>
   <div class="events-header">
-    <h3>Events Calendar</h3>
+    <h3>Upcoming Performances</h3>
   </div>
-  <div id="events-container">
+  <div class="events-container">
     <ul>
       <% Spree::Post.published.each do |post| %>
         <li>
