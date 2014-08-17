@@ -6,9 +6,16 @@
   <%= "Title: #{@post.title}" %>
 </h4>
 <h4>
-  <%= t(:description) %>
+  <%= "Date and Time: #{@post.event_date}" %>
 </h4>
-<%= @post.description %>
+<h4>
+  <%= "Venue: #{@post.event_venue}" %>
+</h4>
+<h4>
+  <%= link_to @post.event_link do %>
+    <%= "Link: #{@post.event_link}" %>
+  <% end %>
+</h4>
 <p></p>
 <%= link_to_edit @post, :class => 'edit_slide' %>
 <%= t(:or) %>
