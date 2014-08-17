@@ -4,6 +4,8 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.datetime :event_date
+      t.text :event_venue
+      t.text :event_link
       t.boolean :published
 
       t.timestamps
