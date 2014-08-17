@@ -1,38 +1,37 @@
 <% if Spree::Post.published.any? %>
-  <div class="news-ticker eight columns">
+  <div class="events-header">
     <h3>Events Calendar</h3>
-    <p></p>
-    <div id="news-container">
-      <ul>
-        <% Spree::Post.published.each do |post| %>
-          <li>
-            <div class="event">
-              <div class="date-left">
-                <h6>
-                  <%= post.event_date.strftime("%a") %>
-                </h6>
-                <h5>
-                  <%= post.event_date.strftime("%-d") %>
-                </h5>
-                <h6>
-                  <%= post.event_date.strftime("%b") %>
-                </h6>
-              </div>
-              <div class="date-pointer">
-              </div>
-              <div class="time">
-                <h1><%= post.event_date.strftime("%l:%M%P") %></h1>
-              </div>
-              <div class="event-info">
-                <%= link_to post.event_link do %>
-                  <h2><%= post.title %></h2>
-                  <h2><%= post.event_venue %></h2>
-                <% end %>
-              </div>
+  </div>
+  <div id="events-container">
+    <ul>
+      <% Spree::Post.published.each do |post| %>
+        <li>
+          <div class="event">
+            <div class="date-left">
+              <h6>
+                <%= post.event_date.strftime("%a") %>
+              </h6>
+              <h5>
+                <%= post.event_date.strftime("%-d") %>
+              </h5>
+              <h6>
+                <%= post.event_date.strftime("%b") %>
+              </h6>
             </div>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+            <div class="date-pointer">
+            </div>
+            <div class="time">
+              <h1><%= post.event_date.strftime("%l:%M%P") %></h1>
+            </div>
+            <div class="event-info">
+              <%= link_to post.event_link do %>
+                <h2><%= post.title %></h2>
+                <h2><%= post.event_venue %></h2>
+              <% end %>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
   </div>
 <% end %>
