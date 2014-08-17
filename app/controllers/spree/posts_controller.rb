@@ -12,7 +12,7 @@ module Spree
     private
 
     def post_params
-      params.require(:post).permit(:title, :description, :published, :event_month, :event_day, :event_year, :event_time)
+      params.require(:post).permit(:title, :description, :published, :event_date)
     end
 
   end
