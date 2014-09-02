@@ -30,7 +30,7 @@
               <% end %>
             </div>
             <div class="event-details">
-                <p><%= post.description.html_safe %></p>
+                <p><%= post.description %> <%= link_to 'more info', post.event_link %></p>
             </div>
           </div>
         </li>
