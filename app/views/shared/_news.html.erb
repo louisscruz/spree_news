@@ -4,7 +4,7 @@
   </div>
   <div class="events-container">
     <ul>
-      <% Spree::Post.published.each do |post| %>
+      <% Spree::Post.published.order(:event_date).each do |post| %>
         <li>
           <div class="event">
             <div class="date-left">
