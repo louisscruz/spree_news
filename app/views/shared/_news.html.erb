@@ -26,10 +26,10 @@
             </div>
             <div class="event-info">
                 <h2><%= post.title %></h2>
-                <h6><a href="#">details</a></h6>
+                <a id="details-toggle" href="#">details</a>
             </div>
-            <div class="event-details">
-                <p><%= post.description %> <%= link_to 'more info', post.event_link %></p>
+            <div id="event-details" class="event-details">
+                <p><%= post.description %></p> <%= link_to 'more info', post.event_link %>
             </div>
           </div>
         </li>
