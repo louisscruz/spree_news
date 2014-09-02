@@ -6,7 +6,7 @@ module Spree
     end
 
     def show
-      @post = Spree::Post.find(params[:id])
+      @post = Spree::Post.find(params[:id]).order(:event_date)
     end
 
     private
