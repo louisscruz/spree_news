@@ -25,9 +25,8 @@
               <h2><%= post.event_venue %></h2>
             </div>
             <div class="event-info">
-              <%= link_to post.event_link do %>
                 <h2><%= post.title %></h2>
-              <% end %>
+                <h6><a href="#">details</a></h6>
             </div>
             <div class="event-details">
                 <p><%= post.description %> <%= link_to 'more info', post.event_link %></p>
