@@ -29,8 +29,10 @@
                 <a id="details-toggle" href="#">details</a>
             </div>
           </div>
-          <div id="event-details" class="event-details">
+          <div class="details-row">
+            <div id="event-details" class="event-details">
               <p><%= post.description %></p> <%= link_to 'more info', post.event_link %>
+            </div>
           </div>
         </li>
       <% end %>
