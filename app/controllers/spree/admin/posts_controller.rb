@@ -1,7 +1,7 @@
 class Spree::Admin::PostsController < Spree::Admin::ResourceController
 
   def index
-    @posts = Spree::Post.all
+    @posts = Spree::Post.all.order(:event_date)
   end
 
   def show

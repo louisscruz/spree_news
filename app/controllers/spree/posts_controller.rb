@@ -2,7 +2,7 @@ module Spree
   class PostsController < BaseController
 
     def index
-      @posts = Spree::Post.published.latest
+      @posts = Spree::Post.published.order(:event_date)
     end
 
     def show
