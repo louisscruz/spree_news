@@ -28,10 +28,8 @@
                 <a id="details-toggle" href="#">details</a>
             </div>
           </div>
-          <div class="details-row view-row">
-            <div id="event-details" class="event-details">
-              <p><%= post.description %></p> <%= link_to 'more info', post.event_link %>
-            </div>
+          <div class="event-details details-row view-row">
+            <p><%= post.description %></p> <%= link_to 'more info', post.event_link %>
           </div>
       <% end %>
 
