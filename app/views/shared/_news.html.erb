@@ -2,11 +2,10 @@
   <div class="events-header">
     <h3>Performances</h3>
   </div>
-  <div class="events-container">
-    <ul>
+  <div class="events-container view-table">
+
       <% Spree::Post.published.order(:event_date).each do |post| %>
-        <li>
-          <div class="event">
+          <div class="event view-row">
             <div class="date-left">
               <h6>
                 <%= post.event_date.strftime("%a") %>
@@ -29,13 +28,12 @@
                 <a id="details-toggle" href="#">details</a>
             </div>
           </div>
-          <div class="details-row">
+          <div class="details-row view-row">
             <div id="event-details" class="event-details">
               <p><%= post.description %></p> <%= link_to 'more info', post.event_link %>
             </div>
           </div>
-        </li>
       <% end %>
-    </ul>
+
   </div>
 <% end %>
